@@ -1,0 +1,27 @@
+@import '../fonts/roboto/roboto.css';
+
+body,
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans SC', 'Roboto',
+    'Roboto Mono', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+#title {
+  color: blue;
+}
+
+#box {
+  width: 200px;
+  height: 200px;
+  background: url(../images/bicycle.jpg) no-repeat;
+  display: flex;
+  transform: translate(0, 0);
+}
+
+#box02 {
+  width: 200px;
+  height: 200px;
+  background: url(../images/bicycle.jpg) no-repeat;
+  display: flex;
+  transform: translate(0, 0);
+}
