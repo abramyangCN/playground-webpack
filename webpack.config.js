@@ -8,7 +8,7 @@ const commonCssLoader = [
   {
     loader: MiniCssExtractPlugin.loader,
     options: {
-      publicPath: '../',
+      publicPath: '../../',
     },
   },
   { loader: 'css-loader', options: { importLoaders: 1 } },
@@ -79,7 +79,7 @@ module.exports = {
           // base64 treatment if less than 8KB
           limit: 8 * 1024,
           name: '[hash:10].[ext]',
-          outputPath: './assets/images',
+          outputPath: 'assets/images',
           esModule: false,
         },
         enforce: 'pre',
@@ -89,13 +89,15 @@ module.exports = {
         test: /fonts/,
         loader: 'file-loader',
         options: {
-          name: '[name].[hash:5].[ext]',
-          outputPath: 'assets/fonts/roboto/',
+          name(file) {
+            return file.split('fonts')[1];
+          },
+          outputPath: 'assets/fonts/',
         },
         enforce: 'pre',
       },
       {
-        exclude: /(\.(css|js|json|html|s[ac]ss|jpg|png|gif)$)|(fonts)/,
+        exclude: [/(\.(css|js|json|html|s[ac]ss|jpg|png|gif)$)/, /fonts/],
         loader: 'file-loader',
         options: {
           name: '[name].[hash:5].[ext]',
@@ -108,7 +110,7 @@ module.exports = {
     // plugins config
     new HtmlWebpackPlugin({ template: './public/index.html' }),
     new MiniCssExtractPlugin({
-      filename: '[name].[hash:5].css',
+      filename: './assets/css/[name].[hash:5].css',
     }),
     // new OptimizeCssAseetsWebpackPlugin(),
   ],

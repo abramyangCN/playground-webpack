@@ -3,7 +3,7 @@
 index.js: entry file
 development: webpack ./src/index.js -o ./build/built.js --mode=development
 */
-import data from './src/data.json';
+import data from './data.json';
 import './assets/scss/index.scss';
 
 console.log(data);
