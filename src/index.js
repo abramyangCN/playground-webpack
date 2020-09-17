@@ -5,6 +5,7 @@ development: webpack ./src/index.js -o ./build/built.js --mode=development
 */
 import data from './data.json';
 import './assets/scss/index.scss';
+
 import $ from 'jQuery';
 
 console.log(data);
@@ -62,3 +63,5 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
+
+let a;
