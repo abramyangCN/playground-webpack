@@ -4,7 +4,7 @@ index.js: entry file
 development: webpack ./src/index.js -o ./build/built.js --mode=development
 */
 import data from './data.json';
-import './assets/scss/index.scss';
+import '$assets/scss/index.scss';
 
 import $ from 'jQuery';
 
@@ -23,7 +23,7 @@ document.getElementById('box').onclick = async () => {
   /* eslint-disable-next-line */
   getComponent()
     .then((print) => {
-      console.log(print());
+      print();
     })
     .catch((err) => {
       console.log(err);
@@ -50,6 +50,7 @@ const sum = (...args) => args.reduce((p, n) => p + n, 0);
 console.log(sum(1, 2, 3, 4, 3, 5));
 
 console.log($);
+console.log($);
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -63,5 +64,3 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
-
-let a;

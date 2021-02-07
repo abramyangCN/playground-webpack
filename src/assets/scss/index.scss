@@ -1,4 +1,4 @@
-@import '../fonts/roboto/roboto.css';
+@import '$assets/fonts/roboto/roboto.css';
 
 body,
 html {
@@ -13,7 +13,7 @@ html {
 #box {
   width: 200px;
   height: 200px;
-  background: url(../images/bicycle.jpg) no-repeat;
+  background: url(../images/common/bicycle.jpg) no-repeat;
   display: flex;
   transform: translate(0, 0);
 }
@@ -21,7 +21,7 @@ html {
 #box02 {
   width: 400px;
   height: 200px;
-  background: url(../images/bicycle.jpg) no-repeat;
+  background: url(../images/common/bicycle.jpg) no-repeat;
   display: flex;
   transform: translate(0, 0);
 }
